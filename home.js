@@ -30,5 +30,8 @@ angular.module('app.home',['ngRoute'])
       emp :'='
             },
     transclude:true,
-    controller:'homectrl'
+    controller:'homectrl',
+    link: function(scope, attr ,ele){
+      scope.tableTh = Object.keys(scope.emp[0]);
+    }
   }});
