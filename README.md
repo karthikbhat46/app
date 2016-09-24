@@ -5,9 +5,14 @@
 
 1. npm install https://github.com/karthikbhat46/app
   OR 
-2. bower install https://github.com/karthikbhat46/app
+ bower install https://github.com/karthikbhat46/app
+
+2. include the script file accordingly 
+ 
+`<script src='path to my directive.js'></script>`
 
 3. inject `app.home` to your angular.module statement
+
 
 4. use it like:
 
