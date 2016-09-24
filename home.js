@@ -2,7 +2,7 @@
 
 angular.module('app.d1',['ngRoute'])
 
-.directive('d1', function(){
+.directive('d1', function($timeout){
   return {
       restrict:'EA',
       template:`<table padding="" border="2">
@@ -21,6 +21,13 @@ angular.module('app.d1',['ngRoute'])
             },
     transclude:true,
     link: function(scope, attr ,ele){
-      scope.tableTh = Object.keys(scope.emp[0]);
+      $timeout(function () {
+        console.log(scope.emp, attr, ele);
+        var k = Object.keys(scope.emp[0]);
+        k = k.splice(0,k.length-1);
+
+        scope.tableTh = k;
+      }, 100);
+
     }
   }});
