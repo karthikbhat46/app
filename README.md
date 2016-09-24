@@ -11,7 +11,7 @@
  
 `<script src='path to my directive.js'></script>`
 
-3. inject `app.home` to your angular.module statement
+3. inject `app.d1` to your angular.module statement
 
 
 4. use it like:
